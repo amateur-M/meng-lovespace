@@ -1,0 +1,138 @@
+{
+  "Color": {
+    "canvas": {
+      "$type": "color",
+      "$value": "#FCF7F7FF"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#FFFFFFFF"
+    },
+    "softPink": {
+      "$type": "color",
+      "$value": "#FFF2F5FF"
+    },
+    "brandPrimary": {
+      "$type": "color",
+      "$value": "#E3789CFF"
+    },
+    "brandDeep": {
+      "$type": "color",
+      "$value": "#C95980FF"
+    },
+    "brandLight": {
+      "$type": "color",
+      "$value": "#FFE8F0FF"
+    },
+    "glowPink": {
+      "$type": "color",
+      "$value": "#FFDBE8FF"
+    },
+    "glowPeach": {
+      "$type": "color",
+      "$value": "#FFE8D6FF"
+    },
+    "textPrimary": {
+      "$type": "color",
+      "$value": "#2E2629FF"
+    },
+    "textSecondary": {
+      "$type": "color",
+      "$value": "#8C7A82FF"
+    },
+    "textMuted": {
+      "$type": "color",
+      "$value": "#B5A6ABFF"
+    },
+    "borderSubtle": {
+      "$type": "color",
+      "$value": "#F2E5E8FF"
+    },
+    "accentPeach": {
+      "$type": "color",
+      "$value": "#F2B082FF"
+    },
+    "accentSage": {
+      "$type": "color",
+      "$value": "#8FB5A3FF"
+    },
+    "success": {
+      "$type": "color",
+      "$value": "#7AAD94FF"
+    },
+    "warning": {
+      "$type": "color",
+      "$value": "#E3AB6BFF"
+    },
+    "error": {
+      "$type": "color",
+      "$value": "#D97070FF"
+    }
+  },
+  "Spacing": {
+    "base": {
+      "$type": "number",
+      "$value": 8
+    },
+    "cardGap": {
+      "$type": "number",
+      "$value": 24
+    },
+    "section": {
+      "$type": "number",
+      "$value": 32
+    },
+    "page": {
+      "$type": "number",
+      "$value": 48
+    }
+  },
+  "Radius": {
+    "card": {
+      "$type": "number",
+      "$value": 24
+    },
+    "button": {
+      "$type": "number",
+      "$value": 50
+    },
+    "input": {
+      "$type": "number",
+      "$value": 16
+    },
+    "image": {
+      "$type": "number",
+      "$value": 20
+    },
+    "chip": {
+      "$type": "number",
+      "$value": 999
+    }
+  },
+  "Type": {
+    "display": {
+      "$type": "number",
+      "$value": 32
+    },
+    "pageTitle": {
+      "$type": "number",
+      "$value": 26
+    },
+    "cardTitle": {
+      "$type": "number",
+      "$value": 18
+    },
+    "body": {
+      "$type": "number",
+      "$value": 14
+    },
+    "caption": {
+      "$type": "number",
+      "$value": 12
+    },
+    "numeral": {
+      "$type": "number",
+      "$value": 44
+    }
+  }
+}

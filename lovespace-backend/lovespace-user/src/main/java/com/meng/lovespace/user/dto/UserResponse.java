@@ -1,0 +1,33 @@
+package com.meng.lovespace.user.dto;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+/**
+ * 返回给前端的用户视图（不含密码哈希）。
+ *
+ * @param id 用户 ID
+ * @param phone 登录手机号
+ * @param username 用户名（展示名，可修改）
+ * @param email 邮箱（可选）
+ * @param avatarUrl 头像 URL
+ * @param gender 性别
+ * @param birthday 生日
+ * @param status 状态
+ * @param role 角色：0 普通用户 1 管理员
+ * @param createdAt 创建时间
+ * @param updatedAt 更新时间
+ */
+public record UserResponse(
+        String id,
+        String phone,
+        String username,
+        String email,
+        String avatarUrl,
+        Integer gender,
+        LocalDate birthday,
+        Integer status,
+        Integer role,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt) {}
+

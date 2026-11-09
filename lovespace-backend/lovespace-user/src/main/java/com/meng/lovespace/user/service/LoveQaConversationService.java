@@ -1,0 +1,40 @@
+package com.meng.lovespace.user.service;
+
+import com.meng.lovespace.ai.dto.RetrievedChunk;
+import com.meng.lovespace.user.dto.LoveQaConversationPageResponse;
+import com.meng.lovespace.user.dto.LoveQaMessagesResponse;
+import java.util.List;
+
+/** 恋爱问答会话与消息的 MySQL 持久化及查询。 */
+public interface LoveQaConversationService {
+
+    /**
+     * 每轮对话成功后写入：会话元数据（首条建会话）与 user/assistant 两条消息。
+     *
+     * @param conversationId 与 Redis / API 一致
+     * @param userId 当前用户
+     * @param coupleId 可选情侣 ID
+     * @param userMessage 用户本轮输入
+     * @param assistantReply 模型回复
+     * @param retrievedChunks 本轮 assistant 检索引用快照，可为 null 或空
+     */
+    void appendChatRound(
+            String conversationId,
+            String userId,
+            String coupleId,
+            String userMessage,
+            String assistantReply,
+            List<RetrievedChunk> retrievedChunks);
+
+    /** 当前用户的会话列表（按更新时间倒序）。 */
+    LoveQaConversationPageResponse pageConversations(String userId, long page, long pageSize);
+
+    /** 会话下全部消息；会话须属于当前用户。 */
+    LoveQaMessagesResponse listMessages(String userId, String conversationId);
+
+    /**
+     * 若 Redis 中无该会话状态但 MySQL 已有历史消息，则从 DB 恢复轮次写入 Redis，供 RAG 多轮记忆使用
+     * （例如 Redis TTL 过期后从历史会话继续聊）。
+     */
+    void restoreRedisSessionIfMissing(String userId, String coupleId, String conversationId);
+}
